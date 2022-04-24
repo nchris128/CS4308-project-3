@@ -1,0 +1,12 @@
+
+import scl.h
+implementations
+function main return type integer is
+variables
+    define x of type double
+begin
+    display "Welcome"
+    set x = 45.95
+    display "Value", x
+    exit
+endfun main
