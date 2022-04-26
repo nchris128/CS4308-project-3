@@ -4,7 +4,7 @@ import scl_scanner
 
 # open files that are inside the source folder and read
 keywordsCheck = scl_scanner.keywordScanner()
-operatorsCheck = ['=', '*', '/', '('')', '[]', '<=', ":"]
+operatorsCheck = ['=', '*', '/', '(',')', '[',']', '<=', ":"]
 identifiersCheck = scl_scanner.identifierScanner()
 identifierDuplicate = []
 fileName = ''

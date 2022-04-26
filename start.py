@@ -45,7 +45,7 @@ def printMenu():
         if fileName == '':
             print("\nPlease select a file first")
             printMenu()
-        begin()
+        scl_interpreter.interpreter()
         printMenu()
     elif choice == '6':
         print("Exiting....")

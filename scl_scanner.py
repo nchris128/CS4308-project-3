@@ -1,6 +1,7 @@
 import re
 #removing comments and unnecessary symbols
 cleanedSCL = []
+identifiterList = []
 
 def cleanup(scl):
     global cleanedSCL
@@ -67,18 +68,19 @@ def identifierScanner():
     # global identifiterList
     #iterates through scl looking for identifiers being defined then adding to new list
     idx = 0
-    identifiterList = []
+    
     for i in cleanedSCL:
-        idx += 1
-        if i == 'define':
+        
+        if i == 'define' or 'symbol':
             identifiterList.append(cleanedSCL[idx])
+        idx += 1
 
     return(identifiterList)
 
 def operatorScanner():
     # global operatorList
     #iterates through scl to find operators and add it to new list
-    operatorTable = [ '=', '*', '/', '(', ')', '[]', '<=', '>=', ':']
+    operatorTable = [ '=', '*', '/', '(', ')', '[', ']', '<=', '>=', ':']
     operatorList = []
     for i in cleanedSCL:
         if i in operatorTable:

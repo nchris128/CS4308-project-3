@@ -1,5 +1,6 @@
 import scl_scanner
 
+tokenList = []
 lexemeList = []
 lexeme = ''
 nextToken = ''
@@ -142,11 +143,14 @@ def lex(passedLexeme):
 
     #add lexeme to list of lexemes
     lexemeList.append(lexeme)
-
+    tokenList.append(nextToken)
     #output token and lexeme
     print("\nNext token is: " + str(nextToken) + ", Next lexeme is " + lexeme)
     return nextToken, lexeme
 
+
+
+    
 # parsefilename()
 
 
