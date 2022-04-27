@@ -47,7 +47,7 @@ def cleanup(scl):
 
 
 def keywordScanner():
-    # global keywordList
+    global keywordTable
     #table for keywords to compare to the scl file
     keywordTable =['import', 'begin', 'call','using', 'endfun', 'set', 'exit',
                  'symbol', 'forward', 'function', 'parameters', 'array', 'integer',
